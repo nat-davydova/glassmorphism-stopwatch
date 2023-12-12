@@ -1,0 +1,31 @@
+:root {
+    /* colors declarations !!! DON'T USE IT outside :root or directly */
+    --white: #fff;
+    --dark-grey: #03080E;
+
+    /* functions colors declarations !!! USE ONLY THEM */
+    --dark: var(--dark-grey);
+    --light: var(--white);
+
+    /* media queries: we can't use values in @media directly but shall use only these breakpoints */
+
+    /* other variables */
+    --font-size-default: 15px;
+
+    --font-color--default: var(--light);
+
+    --bg-color--dark: var(--dark);
+}
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--font-size-default);
+    color: var(--font-color--default);
+    background-color: var(--bg-color--dark);
+}
