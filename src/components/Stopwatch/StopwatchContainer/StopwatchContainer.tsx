@@ -9,7 +9,7 @@ interface IStopwatchContainerProps {
 export function StopwatchContainer({ children }: IStopwatchContainerProps) {
   return (
     <div className={styles.stopwatchContainer}>
-      <div className={styles.circle}></div>
+      <div className={`${styles.circle} ${styles.circle1}`}></div>
 
       {children}
     </div>

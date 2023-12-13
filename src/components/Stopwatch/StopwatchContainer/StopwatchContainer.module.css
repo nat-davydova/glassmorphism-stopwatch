@@ -13,3 +13,21 @@
     position: absolute;
     border-radius: 50%;
 }
+
+.circle1 {
+    --dimensions: 300px;
+    --bg-color--end: #ff0058;
+    --bg-color--start: #ffbc00;
+
+
+    top: 0;
+    left: 0;
+    width: var(--dimensions);
+    height: var(--dimensions);
+    background-image: linear-gradient(
+            315deg,
+            var(--bg-color--start) 0%,
+            var(--bg-color--start) 20%,
+            var(--bg-color--end) 80%
+    );
+}
