@@ -1,10 +1,11 @@
 .header {
     max-width: 600px;
-    margin: auto;
+    margin: 50px auto;
     text-align: center;
 }
 
 .header__title {
+    margin-top: 0;
     margin-bottom: 10px;
     font-size: var(--font-size--xxl);
     font-weight: var(--font-weight--default);

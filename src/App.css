@@ -33,3 +33,8 @@ body {
     color: var(--font-color--default);
     background-color: var(--bg-color--dark);
 }
+
+body a {
+    color: inherit;
+    text-decoration: none;
+}
