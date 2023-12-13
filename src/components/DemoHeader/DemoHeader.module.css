@@ -1,5 +1,12 @@
 .header {
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
     text-align: center;
+}
+
+.header__title {
+    margin-bottom: 10px;
+    font-size: var(--font-size--xxl);
+    font-weight: var(--font-weight--default);
+    letter-spacing: 1px;
 }
