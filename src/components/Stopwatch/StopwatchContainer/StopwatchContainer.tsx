@@ -10,6 +10,7 @@ export function StopwatchContainer({ children }: IStopwatchContainerProps) {
   return (
     <div className={styles.stopwatchContainer}>
       <div className={`${styles.circle} ${styles.circle1}`}></div>
+      <div className={`${styles.circle} ${styles.circle2}`}></div>
 
       {children}
     </div>
