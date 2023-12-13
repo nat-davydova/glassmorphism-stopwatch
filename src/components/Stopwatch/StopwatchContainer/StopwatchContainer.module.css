@@ -1,23 +1,32 @@
 .stopwatchContainer {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 95%;
     max-width: 800px;
     height: 90vh;
     max-height: 600px;
     margin: 0 auto 50px;
+}
 
-    border: 2px solid #ffffff;
+.stopwatchContainer .example {
+    width: 80%;
+    height: 60%;
+    border: 2px solid red;
+    z-index: 2;
 }
 
 .circle {
     position: absolute;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .circle1 {
     --dimensions: 330px;
-    --bg-color--start: #ffbc00;
-    --bg-color--end: #ff0058;
+    --bg-color--start1: #ffbc00;
+    --bg-color--end1: #ff0058;
 
     top: 0;
     right: 0;
@@ -25,16 +34,16 @@
     height: var(--dimensions);
     background-image: linear-gradient(
             315deg,
-            var(--bg-color--start) 0%,
-            var(--bg-color--start) 20%,
-            var(--bg-color--end) 80%
+            var(--bg-color--start1) 0%,
+            var(--bg-color--start1) 20%,
+            var(--bg-color--end1) 80%
     );
 }
 
 .circle2 {
     --dimensions: 240px;
-    --bg-color--start: #ff0058;
-    --bg-color--end: #03a9f4;
+    --bg-color--start2: #ff0058;
+    --bg-color--end2: #03a9f4;
 
     bottom: 0;
     left: 0;
@@ -42,25 +51,25 @@
     height: var(--dimensions);
     background-image: linear-gradient(
             315deg,
-            var(--bg-color--start) 0%,
-            var(--bg-color--start) 20%,
-            var(--bg-color--end) 80%
+            var(--bg-color--start2) 0%,
+            var(--bg-color--start2) 20%,
+            var(--bg-color--end2) 80%
     );
 }
 
 .circle3 {
     --dimensions: 130px;
-    --bg-color--start: #4dff03;
-    --bg-color--end: #00d0ff;
+    --bg-color--start3: #4dff03;
+    --bg-color--end3: #00d0ff;
 
-    top: 120px;
+    top: 60px;
     left: 200px;
     width: var(--dimensions);
     height: var(--dimensions);
     background-image: linear-gradient(
             315deg,
-            var(--bg-color--start) 0%,
-            var(--bg-color--start) 20%,
-            var(--bg-color--end) 80%
+            var(--bg-color--start3) 0%,
+            var(--bg-color--start3) 20%,
+            var(--bg-color--end3) 80%
     );
 }
