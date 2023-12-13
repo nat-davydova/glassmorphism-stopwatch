@@ -11,3 +11,30 @@
     font-weight: var(--font-weight--default);
     letter-spacing: 1px;
 }
+
+.header__btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.header__btn {
+    transition:
+            all
+            var(--transition-duration)
+            var(--transition-timing-function)
+            var(--transition-delay);
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: var(--bg-color--dark);
+    border: 1px solid var(--border-color--light);
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+
+.header__btn:hover {
+    color: var(--font-color--dark);
+    background-color: var(--bg-color--light);
+}

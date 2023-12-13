@@ -17,8 +17,16 @@
     --font-weight--semibold: 600;
 
     --font-color--default: var(--light);
+    --font-color--dark: var(--dark);
 
     --bg-color--dark: var(--dark);
+    --bg-color--light: var(--light);
+
+    --border-color--light: var(--light);
+
+    --transition-duration: .2s;
+    --transition-timing-function: linear;
+    --transition-delay: 0s;
 }
 
 html,
