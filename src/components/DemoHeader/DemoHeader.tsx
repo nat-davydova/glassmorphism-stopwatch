@@ -1,6 +1,8 @@
+import styles from "./DemoHeader.module.css";
+
 export function DemoHeader() {
   return (
-    <header className="header">
+    <header className={styles.header}>
       <h1 className="header__title">Glassmorphism Stopwatch</h1>
       <div className="header__btns">
         <a
