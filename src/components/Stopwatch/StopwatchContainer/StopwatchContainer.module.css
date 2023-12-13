@@ -33,11 +33,28 @@
 
 .circle2 {
     --dimensions: 240px;
-    --bg-color--end: #03a9f4;
     --bg-color--start: #ff0058;
+    --bg-color--end: #03a9f4;
 
     bottom: 0;
     left: 0;
+    width: var(--dimensions);
+    height: var(--dimensions);
+    background-image: linear-gradient(
+            315deg,
+            var(--bg-color--start) 0%,
+            var(--bg-color--start) 20%,
+            var(--bg-color--end) 80%
+    );
+}
+
+.circle3 {
+    --dimensions: 130px;
+    --bg-color--start: #4dff03;
+    --bg-color--end: #00d0ff;
+
+    top: 120px;
+    left: 200px;
     width: var(--dimensions);
     height: var(--dimensions);
     background-image: linear-gradient(
