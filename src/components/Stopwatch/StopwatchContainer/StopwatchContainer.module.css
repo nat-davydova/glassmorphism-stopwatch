@@ -1,0 +1,9 @@
+.stopwatchContainer {
+    width: 95%;
+    max-width: 800px;
+    height: 90vh;
+    max-height: 700px;
+    margin: 0 auto 50px;
+
+    border: 2px solid #ffffff;
+}
