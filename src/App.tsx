@@ -7,7 +7,7 @@ function App() {
     <>
       <DemoHeader />
       <StopwatchContainer>
-        <div>Wow</div>
+        <div> </div>
       </StopwatchContainer>
     </>
   );

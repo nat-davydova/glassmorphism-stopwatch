@@ -1,4 +1,5 @@
 .stopwatchContainer {
+    position: relative;
     width: 95%;
     max-width: 800px;
     height: 90vh;
@@ -6,4 +7,9 @@
     margin: 0 auto 50px;
 
     border: 2px solid #ffffff;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
 }
