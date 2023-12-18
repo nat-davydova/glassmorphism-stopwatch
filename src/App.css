@@ -10,7 +10,7 @@
     /* media queries: we can't use values in @media directly but shall use only these breakpoints */
 
     /* other variables */
-    --font-size-default: 15px;
+    --font-size-default: 16px;
     --font-size--xxl: 35px;
 
     --font-weight--default: 400;
