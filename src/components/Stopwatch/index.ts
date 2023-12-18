@@ -1,1 +1,1 @@
-export { StopwatchContainer } from "./StopwatchContainer";
+export { StopWatch } from "./StopWatch";
