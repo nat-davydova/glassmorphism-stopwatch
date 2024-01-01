@@ -1,0 +1,16 @@
+.counter {
+    --timer-element-dimensions: 50px;
+
+    width: var(--timer-element-dimensions);
+    height:  var(--timer-element-dimensions);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow:
+            inset 1px 1px 0.12px rgba(255, 255, 255, 0.4),
+            1px 1px 3px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
