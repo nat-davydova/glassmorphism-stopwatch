@@ -6,3 +6,50 @@
     text-align: center;
     font-size: var(--font-size-lg);
 }
+
+.button {
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-right: 15px;
+
+
+}
+
+.button:nth-child(3) {
+    --bg-color--start3: #00B02DFF;
+    --bg-color--end3: #006aff;
+
+    background-image: linear-gradient(
+            315deg,
+            var(--bg-color--start3) 0%,
+            var(--bg-color--start3) 20%,
+            var(--bg-color--end3) 80%)
+}
+
+.button:nth-child(4) {
+    --bg-color--start1: #da7600;
+    --bg-color--end1: #ff0058;
+
+    background-image: linear-gradient(
+            315deg,
+            var(--bg-color--start1) 0%,
+            var(--bg-color--start1) 20%,
+            var(--bg-color--end1) 80%
+    );
+}
+
+.button:nth-child(5) {
+    --bg-color--start2: #CA0043FF;
+    --bg-color--end2: #7600DFFF;
+
+    background-image: linear-gradient(
+            315deg,
+            var(--bg-color--start2) 0%,
+            var(--bg-color--start2) 20%,
+            var(--bg-color--end2) 80%
+    );
+}
