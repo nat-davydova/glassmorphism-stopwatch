@@ -16,7 +16,16 @@
 .buttons {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     gap: 20px;
+}
+
+@media (min-width: 400px) {
+    .buttons {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
 
 .start {

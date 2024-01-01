@@ -6,21 +6,34 @@
     width: 95%;
     max-width: 800px;
     height: 90vh;
-    max-height: 600px;
+    max-height: 500px;
     margin: 0 auto 50px;
 }
 
+@media (min-width: 550px) {
+    .stopwatchContainer {
+        max-height: 600px;
+    }
+}
+
 .stopWatchBody {
-    width: 80%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 50px;
+    padding: 30px 20px;
     background: rgba(255, 255, 255, 0.085);
     backdrop-filter: blur(15px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     z-index: 2;
+}
+
+@media (min-width: 550px) {
+    .stopWatchBody {
+        width: 80%;
+        padding: 50px;
+    }
 }
 
 .circle {
@@ -30,7 +43,7 @@
 }
 
 .circle1 {
-    --dimensions: 330px;
+    --dimensions: 270px;
     --bg-color--start1: #ffbc00;
     --bg-color--end1: #ff0058;
 
@@ -44,6 +57,12 @@
             var(--bg-color--start1) 20%,
             var(--bg-color--end1) 80%
     );
+}
+
+@media (min-width: 750px) {
+    .circle1 {
+        --dimensions: 330px;
+    }
 }
 
 .circle2 {
@@ -68,8 +87,8 @@
     --bg-color--start3: #4dff03;
     --bg-color--end3: #00d0ff;
 
-    top: 60px;
-    left: 200px;
+    top: 125px;
+    left: 0;
     width: var(--dimensions);
     height: var(--dimensions);
     background-image: linear-gradient(
@@ -78,4 +97,17 @@
             var(--bg-color--start3) 20%,
             var(--bg-color--end3) 80%
     );
+}
+
+@media (min-width: 550px) {
+    .circle3 {
+        top: 60px;
+        left: 100px;
+    }
+}
+
+@media (min-width: 750px) {
+    .circle3 {
+        left: 200px;
+    }
 }

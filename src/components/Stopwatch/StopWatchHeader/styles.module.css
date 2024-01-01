@@ -5,9 +5,16 @@
 .title {
     margin-top: 0;
     margin-bottom: 10px;
+    font-size: var(--font-size-lg);
     font-weight: var(--font-weight--default);
     letter-spacing: 1px;
     text-shadow: 0 0 8px rgba(0,0,0,.6);
+}
+
+@media (min-width: 550px) {
+    .title {
+        font-size: var(--font-size-xl);
+    }
 }
 
 .description {
