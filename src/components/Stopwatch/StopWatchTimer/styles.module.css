@@ -19,20 +19,7 @@
     gap: 20px;
 }
 
-.button {
-    cursor: pointer;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: transform .2s linear 0s;
-}
-
-.button:hover {
-    transform: scale(1.1);
-}
-
-.button:nth-child(1) {
+.start {
     --bg-color--start3: #00B02DFF;
     --bg-color--end3: #006aff;
 
@@ -43,7 +30,7 @@
             var(--bg-color--end3) 80%)
 }
 
-.button:nth-child(2) {
+.stop {
     --bg-color--start1: #da7600;
     --bg-color--end1: #ff0058;
 
@@ -55,7 +42,7 @@
     );
 }
 
-.button:nth-child(3) {
+.reset {
     --bg-color--start2: #CA0043FF;
     --bg-color--end2: #7600DFFF;
 
