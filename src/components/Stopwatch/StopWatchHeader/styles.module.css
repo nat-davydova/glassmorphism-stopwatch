@@ -1,5 +1,4 @@
 .stopWatchHeader {
-    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -7,10 +6,10 @@
     margin-top: 0;
     font-weight: var(--font-weight--default);
     letter-spacing: 1px;
-    text-shadow: 0px 0px 8px rgba(0,0,0,.6);
+    text-shadow: 0 0 8px rgba(0,0,0,.6);
 }
 
 .description {
     margin: 0;
-    text-shadow: 0px 0px 8px rgba(0,0,0,.6);
+    text-shadow: 0 0 8px rgba(0,0,0,.6);
 }

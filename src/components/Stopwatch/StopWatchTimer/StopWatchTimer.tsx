@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 
 export function StopWatchTimer() {
   return (
-    <>
+    <div className={styles.container}>
       <div className={styles.timer}>
         <TimerCounter value={15} />:<TimerCounter value={15} />:
         <TimerCounter value={15} />
@@ -19,6 +19,6 @@ export function StopWatchTimer() {
           Reset
         </button>
       </div>
-    </>
+    </div>
   );
 }

@@ -12,6 +12,9 @@
 
 .stopWatchBody {
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     padding: 50px;
     background: rgba(255, 255, 255, 0.085);
     backdrop-filter: blur(15px);
