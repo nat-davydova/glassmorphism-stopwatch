@@ -1,3 +1,5 @@
+import styles from "./styles.module.css";
+
 export function StopWatchTimer() {
-  return <div>timer</div>;
+  return <div className={styles.timer}>timer</div>;
 }

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import styles from "./StopwatchContainer.module.css";
+import styles from "./styles.module.css";
 
 interface IStopwatchContainerProps {
   children: ReactNode | ReactNode[];

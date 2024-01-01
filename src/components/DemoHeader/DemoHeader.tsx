@@ -1,4 +1,4 @@
-import styles from "./DemoHeader.module.css";
+import styles from "./styles.module.css";
 
 export function DemoHeader() {
   return (

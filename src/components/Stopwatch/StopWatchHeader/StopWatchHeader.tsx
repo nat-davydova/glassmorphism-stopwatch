@@ -1,4 +1,4 @@
-import styles from "./StopWatchHeader.module.css";
+import styles from "./styles.module.css";
 
 export function StopWatchHeader() {
   return (
