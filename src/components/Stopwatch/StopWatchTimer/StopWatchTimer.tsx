@@ -8,15 +8,17 @@ export function StopWatchTimer() {
         <TimerCounter value={15} />:<TimerCounter value={15} />:
         <TimerCounter value={15} />
       </div>
-      <button className={styles.button} type="button">
-        Start
-      </button>
-      <button className={styles.button} type="button">
-        Stop
-      </button>
-      <button className={styles.button} type="button">
-        Reset
-      </button>
+      <div className={styles.buttons}>
+        <button className={styles.button} type="button">
+          Start
+        </button>
+        <button className={styles.button} type="button">
+          Stop
+        </button>
+        <button className={styles.button} type="button">
+          Reset
+        </button>
+      </div>
     </>
   );
 }
