@@ -1,9 +1,15 @@
+import { useRef, useState } from "react";
+
 import { Button } from "../../Button";
 
 import { TimerCounter } from "./TimerCounter";
 import styles from "./styles.module.css";
 
 export function StopWatchTimer() {
+  const [startTime, setStartTime] = useState<Date | null>(null);
+  const [nowTime, setNowTime] = useState<Date | null>(null);
+  const intervalRef = useRef<string | null>(null);
+
   function handleStart() {
     console.log("start");
   }
