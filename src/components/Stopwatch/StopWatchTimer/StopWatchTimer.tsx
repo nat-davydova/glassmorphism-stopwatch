@@ -24,8 +24,8 @@ export function StopWatchTimer() {
     if (startTime !== null && nowTime !== null) {
       const elapsedTime = nowTime - startTime;
 
-      const milliseconds = Math.floor(elapsedTime / 10);
-      const seconds = Math.floor(elapsedTime / 1000);
+      const milliseconds = Math.floor((elapsedTime % 1000) / 10);
+      const seconds = Math.floor((elapsedTime / 1000) % 60);
       const minutes = Math.floor(elapsedTime / 1000 / 60);
 
       if (minutes === MINUTES_LIMIT) {
