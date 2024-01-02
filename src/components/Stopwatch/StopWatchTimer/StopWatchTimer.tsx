@@ -8,9 +8,12 @@ import styles from "./styles.module.css";
 export function StopWatchTimer() {
   const [startTime, setStartTime] = useState<number | null>(null);
   const [nowTime, setNowTime] = useState<number | null>(null);
+  const [min, setMin] = useState(0);
+  const [sec, setSec] = useState(0);
+  const [ms, setMs] = useState(0);
   const intervalRef = useRef<number | null>(null);
 
-  function handleStart() {
+  function startHandler() {
     const currentDate = Date.now();
 
     setStartTime(currentDate);
@@ -22,33 +25,42 @@ export function StopWatchTimer() {
 
     intervalRef.current = setInterval(() => {
       setNowTime(Date.now);
-      console.log(nowTime);
     }, 10);
   }
 
-  function handleStop() {
+  function stopHandler() {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
   }
 
+  function resetHandler() {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    setMin(0);
+    setSec(0);
+    setMs(0);
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.timer}>
-        <TimerCounter value={2} />:<TimerCounter value={10} />:
-        <TimerCounter value={155} />
+        <TimerCounter value={min} />:<TimerCounter value={sec} />:
+        <TimerCounter value={ms} />
       </div>
       <div className={styles.buttons}>
         <Button
           content="Start"
           classname={styles.start}
-          onClick={handleStart}
+          onClick={startHandler}
         />
-        <Button content="Stop" classname={styles.stop} onClick={handleStop} />
+        <Button content="Stop" classname={styles.stop} onClick={stopHandler} />
         <Button
           content="Reset"
           classname={styles.reset}
-          onClick={() => console.log("wow")}
+          onClick={resetHandler}
         />
       </div>
     </div>
