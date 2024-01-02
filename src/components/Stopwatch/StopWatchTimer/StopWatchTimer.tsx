@@ -22,7 +22,14 @@ export function StopWatchTimer() {
 
     intervalRef.current = setInterval(() => {
       setNowTime(Date.now);
+      console.log(nowTime);
     }, 10);
+  }
+
+  function handleStop() {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
   }
 
   return (
@@ -37,11 +44,7 @@ export function StopWatchTimer() {
           classname={styles.start}
           onClick={handleStart}
         />
-        <Button
-          content="Stop"
-          classname={styles.stop}
-          onClick={() => console.log("wow")}
-        />
+        <Button content="Stop" classname={styles.stop} onClick={handleStop} />
         <Button
           content="Reset"
           classname={styles.reset}
