@@ -6,12 +6,23 @@ import { TimerCounter } from "./TimerCounter";
 import styles from "./styles.module.css";
 
 export function StopWatchTimer() {
-  const [startTime, setStartTime] = useState<Date | null>(null);
-  const [nowTime, setNowTime] = useState<Date | null>(null);
-  const intervalRef = useRef<string | null>(null);
+  const [startTime, setStartTime] = useState<number | null>(null);
+  const [nowTime, setNowTime] = useState<number | null>(null);
+  const intervalRef = useRef<number | null>(null);
 
   function handleStart() {
-    console.log("start");
+    const currentDate = Date.now();
+
+    setStartTime(currentDate);
+    setNowTime(currentDate);
+
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    intervalRef.current = setInterval(() => {
+      setNowTime(Date.now);
+    }, 10);
   }
 
   return (
