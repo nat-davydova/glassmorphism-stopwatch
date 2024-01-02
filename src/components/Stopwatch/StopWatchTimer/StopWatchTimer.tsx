@@ -22,8 +22,11 @@ export function StopWatchTimer() {
 
   useEffect(() => {
     if (startTime !== null && nowTime !== null) {
-      const seconds = Math.floor((nowTime - startTime) / 1000);
-      const minutes = Math.floor((nowTime - startTime) / 1000 / 60);
+      const elapsedTime = nowTime - startTime;
+
+      const milliseconds = Math.floor(elapsedTime / 10);
+      const seconds = Math.floor(elapsedTime / 1000);
+      const minutes = Math.floor(elapsedTime / 1000 / 60);
 
       if (minutes === MINUTES_LIMIT) {
         stopHandler();
@@ -31,6 +34,7 @@ export function StopWatchTimer() {
 
       setMin(minutes);
       setSec(seconds);
+      setMs(milliseconds);
     }
   }, [nowTime, startTime]);
 
