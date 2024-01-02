@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "../../Button";
 
 import { TimerCounter } from "./TimerCounter";
+import { MINUTES_LIMIT } from "./consts";
 import styles from "./styles.module.css";
 
 export function StopWatchTimer() {
@@ -13,9 +14,22 @@ export function StopWatchTimer() {
   const [ms, setMs] = useState(0);
   const intervalRef = useRef<number | null>(null);
 
+  function stopHandler() {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+  }
+
   useEffect(() => {
     if (startTime !== null && nowTime !== null) {
-      const seconds = Math.round((nowTime - startTime) / 1000);
+      const seconds = Math.floor((nowTime - startTime) / 1000);
+      const minutes = Math.floor((nowTime - startTime) / 1000 / 60);
+
+      if (minutes === MINUTES_LIMIT) {
+        stopHandler();
+      }
+
+      setMin(minutes);
       setSec(seconds);
     }
   }, [nowTime, startTime]);
@@ -33,12 +47,6 @@ export function StopWatchTimer() {
     intervalRef.current = setInterval(() => {
       setNowTime(Date.now);
     }, 10);
-  }
-
-  function stopHandler() {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
   }
 
   function resetHandler() {
