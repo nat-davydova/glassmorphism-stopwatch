@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Button } from "../../Button";
 
@@ -12,6 +12,13 @@ export function StopWatchTimer() {
   const [sec, setSec] = useState(0);
   const [ms, setMs] = useState(0);
   const intervalRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (startTime !== null && nowTime !== null) {
+      const seconds = Math.round((nowTime - startTime) / 1000);
+      setSec(seconds);
+    }
+  }, [nowTime, startTime]);
 
   function startHandler() {
     const currentDate = Date.now();
@@ -39,6 +46,8 @@ export function StopWatchTimer() {
       clearInterval(intervalRef.current);
     }
 
+    setStartTime(null);
+    setNowTime(null);
     setMin(0);
     setSec(0);
     setMs(0);
