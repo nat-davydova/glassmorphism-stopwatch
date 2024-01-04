@@ -1,6 +1,6 @@
 # Glassmorphism StopWatch (React/TS)
 
-This is a compact and straightforward yet aesthetically appealing stopwatch demo. Users have the ability to initiate time tracking, stop it, and reset the timer.
+This is a compact and straightforward yet aesthetically appealing stopwatch demo. Users have the ability to initiate time tracking, stop it (completely, without resume option), and reset the timer.
 
 My goal was to develop a modern UI/UX design from scratch: from a design concept up to the implementation in React and TypeScript.
 
@@ -15,6 +15,12 @@ My goal was to develop a modern UI/UX design from scratch: from a design concept
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+
+## Features
+
+* user can **start**, **stop** (completely, without resume option) and **reset** the timer;
+* modern and slick glassmorphism effect is built with `backdrop-filter`;
+* fully responsive (up to 280px, Galaxy Fold compatible);
 
 ## How to run locally
 
