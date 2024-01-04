@@ -5,5 +5,7 @@ export interface ITimerCounterProps {
 }
 
 export function TimerCounter({ value }: ITimerCounterProps) {
-  return <div className={styles.counter}>{value}</div>;
+  const formattedValue = value < 10 ? `0${value}` : value;
+
+  return <div className={styles.counter}>{formattedValue}</div>;
 }
